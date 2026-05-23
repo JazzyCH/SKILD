@@ -1,0 +1,76 @@
+name: skild
+channels:
+  - nvidia/label/cuda-12.8.1
+  - conda-forge
+  - defaults
+dependencies:
+  # Toolchain required by torch.compile
+  - gcc=11.4.0
+  - gxx=11.4.0
+  - binutils=2.40
+
+  # CUDA toolkit (set to match your driver / target hardware)
+  - cuda-toolkit=12.8.1
+  - cuda-nvcc=12.8.93
+  - cuda-nvrtc=12.8.93
+  - cuda-nvrtc-dev=12.8.93
+  - cuda-cudart=12.8.90
+  - cuda-cudart-dev=12.8.90
+  - cuda-version=12.8
+  - libnvjitlink=12.8.93
+  - libnvjitlink-dev=12.8.93
+  - libcublas=12.8.4.1
+  - libcublas-dev=12.8.4.1
+  - libcufft=11.3.3.83
+  - libcufft-dev=11.3.3.83
+  - libcurand=10.3.9.90
+  - libcurand-dev=10.3.9.90
+  - libcusolver=11.7.3.90
+  - libcusolver-dev=11.7.3.90
+  - libcusparse=12.5.8.93
+  - libcusparse-dev=12.5.8.93
+
+  # Python
+  - python=3.12
+  - pip
+  - setuptools
+  - wheel
+
+  # System libraries
+  - bzip2
+  - ca-certificates
+  - libffi
+  - zlib
+  - ncurses
+  - openssl
+  - readline
+  - sqlite
+  - tk
+  - xz
+
+  - pip:
+      - ninja
+
+      # Core
+      - numpy
+      - scipy
+      - pandas
+      - matplotlib
+      - pillow
+      - tqdm
+      - pyyaml
+      - ml-collections
+
+      # Evaluation
+      - torch-fidelity
+      - lpips
+      - pytorch-msssim
+      - pyiqa
+
+      # Logging
+      - wandb
+      - tensorboard
+
+# Install PyTorch separately to match your CUDA build, e.g.:
+#   pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 \
+#       --index-url https://download.pytorch.org/whl/cu128
