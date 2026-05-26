@@ -1,6 +1,6 @@
 # SKILD &mdash; Scale-Invariant K-Space Image Learning Diffusion
 
-Official code repository for the paper ***Everything at Every Scale: Scale-Invariant Diffusion with Continuous Super-Resolution***.
+Official code repository for the paper "[Everything at Every Scale: Scale-Invariant Diffusion with Continuous Super-Resolution](http://arxiv.org/abs/2605.26032)".
 
 ## Overview
 
